@@ -1,1 +1,18 @@
-@import './styles/fonts'
+@import './styles/settings';
+@import './styles/fonts';
+@import './styles/grid';
+@import './styles/home';
+@import './styles/theme-switcher';
+
+body {
+  transition: background 400ms, color 400ms ease;
+}
+
+body.dark {
+  color: #f1f1f1;
+  background: #000000;
+}
+
+body.dark #js-text {
+  color: yellow;
+}
