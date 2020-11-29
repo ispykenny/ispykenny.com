@@ -1,6 +1,7 @@
 .content-area {
-  padding: 6em 0em 4em 0em;
+  padding: 8em 0em 4em 0em;
 }
+
 #css-text {
   background: linear-gradient(
     45deg,
@@ -14,4 +15,12 @@
 #js-text {
   color: #000000;
   transition: background 400ms, color 400ms ease;
+}
+
+
+@media(min-width: $bp-md) {
+  .content-area {
+    padding: 12em 0em 4em 0em;
+  }
+  
 }

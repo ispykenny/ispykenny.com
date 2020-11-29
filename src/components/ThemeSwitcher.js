@@ -3,42 +3,45 @@ import Cookies from 'js-cookie'
 import sunny from '../assets/sunny.svg';
 import dark from '../assets/dark.svg';
 function ThemeSwitcher() {
-  const [theme, swapTheme] = useState(false)
+  const [theme, swapTheme] = useState("")
 
   useEffect(() => {
-    if(!Cookies.get('kenny-theme')) return
-    let cookieState = Cookies.get('kenny-theme');
+    let settings = Cookies.get('kenny-theme');
 
-    if(cookieState) {
-      swapTheme(true)
-      document.querySelector("#changeTheme").checked = true
-    } else {
-      swapTheme(false)
+    if(settings) {
+      if(settings === "true") {
+        document.querySelector("#changeTheme").checked = true
+        swapTheme("true")
+        document.getElementsByTagName('body')[0].className = 'dark';
+      } 
+  
+      if(settings === "false") {
+        swapTheme("false")
+        document.querySelector("#changeTheme").checked = false
+        document.getElementsByTagName('body')[0].className = 'light';
+      }
     }
 
-    const addedClass = theme === true ? 'light' : 'dark'
-    document.getElementsByTagName('body')[0].className = addedClass;
-
-  }, [])
+  }, [theme])
 
 
   const runThemeSwitch = event => {
-    if(event.currentTarget.checked !== true) {
-      swapTheme(false)
-      Cookies.set('kenny-theme', false)
+    if(event.currentTarget.checked === true) {
+      Cookies.set('kenny-theme', "true")
+      swapTheme("true")
     } else {
-      swapTheme(true)
-      Cookies.set('kenny-theme', true)
+      Cookies.set('kenny-theme', "false")
+      swapTheme("false")
     }
-    const addedClass = theme === true ? 'light' : 'dark'
+    const addedClass = theme === "false" ? 'light' : 'dark'
     document.getElementsByTagName('body')[0].className = addedClass;
   }
 
   const Icon = () => {
-    if(theme) {
-      return <div className="theme-switcher__icon"><img src={sunny}/></div>
+    if(theme === "true") {
+      return <div className="theme-switcher__icon"><img src={sunny} alt="sun icon"/></div>
     } else {
-      return <div className="theme-switcher__icon"><img src={dark}/></div>
+      return <div className="theme-switcher__icon"><img src={dark} alt="moon icon"/></div>
     }
   }
 
@@ -50,7 +53,8 @@ function ThemeSwitcher() {
           <input id="changeTheme" type="checkbox" onChange={runThemeSwitch} tabIndex="0"/>
           <label for="changeTheme">
             <span className="screen-reader">Toggle Dark and Light Mode</span>
-            <div className={`theme-switcher__bar ${theme ? 'active' : '' }`}>
+            <div 
+              className={`theme-switcher__bar ${theme === "true" ? 'active' : '' }`}>
               <div className="theme-switcher__ball"></div>
             </div>
           </label>
