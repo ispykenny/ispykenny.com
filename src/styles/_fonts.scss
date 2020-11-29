@@ -4,6 +4,9 @@ body {
   font-family: 'Lora', serif;
   font-size: 16px;
   margin: 0;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p {
@@ -11,7 +14,43 @@ p {
 }
 
 .page-title {
-  // font-size: 5em;
-  font-size: 3em;
+  font-size: 2em;
   margin: 0;
+  line-height: 1.4;
 }
+
+
+@media(min-width: $bp-md) {
+
+  body {
+    font-size: 17px;
+  }
+
+  .page-title {
+    font-size: 2.6em;
+  }
+}
+
+@media(min-width: $bp-lg) {
+
+  body {
+    font-size: 18px;
+  }
+
+  .page-title {
+    font-size: 3em;
+  }
+}
+
+@media(min-width: $bp-xl) {
+  .page-title {
+    font-size: 3em;
+  }
+}
+
+@media(min-width: $bp-xxl) {
+  .page-title {
+    font-size: 3em;
+  }
+}
+

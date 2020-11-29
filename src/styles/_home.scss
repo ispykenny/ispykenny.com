@@ -1,0 +1,26 @@
+.content-area {
+  padding: 8em 0em 4em 0em;
+}
+
+#css-text {
+  background: linear-gradient(
+    45deg,
+    #0F5BFC,
+    #E81EF5
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#js-text {
+  color: #000000;
+  transition: background 400ms, color 400ms ease;
+}
+
+
+@media(min-width: $bp-md) {
+  .content-area {
+    padding: 12em 0em 4em 0em;
+  }
+  
+}
