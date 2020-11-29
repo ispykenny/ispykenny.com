@@ -6,28 +6,25 @@ import { fetchPosts } from "./utils/posts-fetcher";
 
 function App() {
   const [posts, setPosts] = useState({});
-  const [mounted, setMount ] = useState(false);
 
   useEffect(() => {
     async function fetchEndPoints() {
       let getPosts = await fetchPosts('https://kennykrosky.com/wp-json/wp/v2/posts')
-
       setPosts(getPosts)
     }
-
     fetchEndPoints()
   }, [])
 
 
   return (
     <div className="App">
-      {console.log(posts)}
       <Router>
         <Nav/>
-
         <Switch>
           <Route 
-            path="/" exact component={Home}
+            path="/" 
+            exact 
+            render = {(props) => <Home blogs={posts}/> }
           />
         </Switch>
       </Router>

@@ -1,10 +1,28 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import BlogListing from '../components/BlogsListing';
 import Hero from '../components/Homehero';
-function Home() {
+function Home(props) {
+  const [allBlogs, setAllBlogs ] = useState({})
+
+  useEffect(() => {
+    if(props.blogs.length >= 1) {
+      setAllBlogs(props.blogs);
+    }
+  }, [props]);
+
+  const Posts = () => {
+    if(allBlogs.length >= 1) {
+      return <BlogListing posts={allBlogs}/>
+    } else {
+      return (<div>loading Posts...</div>)
+    }
+    
+  }
 
   return (
     <div className="home">
       <Hero/>
+      <Posts/>
     </div>
   )
 }
