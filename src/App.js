@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useEffect , useState } from 'react';
 import Home from './pages/Home';
+import Article from './pages/Article';
 import Nav from "./components/Nav";
 import { fetchPosts } from "./utils/posts-fetcher";
 
@@ -25,6 +26,10 @@ function App() {
             path="/" 
             exact 
             render = {(props) => <Home blogs={posts}/> }
+          />
+          <Route
+            path="/:slug"
+            render={(props) => <Article articles={posts} slug={props}/>}
           />
         </Switch>
       </Router>

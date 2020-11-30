@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import moment from 'moment';
+import Article from '../pages/Article';
 
 function BlogListing(props) {
 
@@ -23,6 +25,10 @@ function BlogListing(props) {
             <h4>{post.title.rendered}</h4>
             <div dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}></div>
             <TimeStamp time={post.date}/>
+            <Link 
+              to={`/${post.slug}`}>
+                View
+            </Link>
           </div>
         ))}
       </div>
