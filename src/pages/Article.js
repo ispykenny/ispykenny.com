@@ -1,4 +1,5 @@
 import React, {useEffect, useState } from 'react';
+import LazyLoad from 'react-lazyload';
 
 
 function Article(props) {
@@ -26,17 +27,19 @@ function Article(props) {
       )
     } else {
       return (
-        <div>
+        <h1>
           Loading..
-        </div>
+        </h1>
       )
     }
   }
 
 
   return (
-    <div className="inner">
-      <RenderPost/>
+    <div className="inner content-area">
+      <LazyLoad>
+        <RenderPost/>
+      </LazyLoad>
     </div>
   )
 }

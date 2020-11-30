@@ -1,5 +1,16 @@
 .content-area {
-  padding: 8em 0em 4em 0em;
+  padding: 4em 0em;
+
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  figure {
+    margin: 0;
+  }
 }
 
 #css-text {
@@ -20,7 +31,7 @@
 
 @media(min-width: $bp-md) {
   .content-area {
-    padding: 12em 0em 4em 0em;
+    padding: 4em 0em;
   }
   
 }
