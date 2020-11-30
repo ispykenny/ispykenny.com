@@ -16,12 +16,11 @@ function Home(props) {
     } else {
       return (<div>loading Posts...</div>)
     }
-    
   }
 
   return (
     <div className="home">
-      <Hero/>
+      <Hero title={`Hello 👋, I'm Kenny Krosky. I'm a front end developer enthusiastic about all things <span id="css-text">CSS</span> and <span id="js-text">JavaScript</span>.`}/>
       <Posts/>
     </div>
   )
