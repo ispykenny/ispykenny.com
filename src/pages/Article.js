@@ -15,7 +15,12 @@ function Article(props) {
       })
     }
 
+    return () => {
+      setCurrentPost(null)
+    }
+
   }, [props]);
+
 
   const RenderPost = () => {
     if(currentPost.id) {
