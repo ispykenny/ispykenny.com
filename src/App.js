@@ -4,9 +4,11 @@ import Home from './pages/Home';
 import Article from './pages/Article';
 import Nav from "./components/Nav";
 import { fetchPosts } from "./utils/posts-fetcher";
+import Test from "./components/Test";
 
 function App() {
   const [posts, setPosts] = useState({});
+  const [theme, setTheme] = useState('false');
 
   useEffect(() => {
     async function fetchEndPoints() {
@@ -18,9 +20,12 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className={`App ${theme == 'true' ? 'dark' : 'light'}`}>
       <Router>
-        <Nav/>
+        <Nav
+          setTheme={setTheme}
+          theme={theme}
+        />
         <Switch>
           <Route 
             path="/" 

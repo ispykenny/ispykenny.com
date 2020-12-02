@@ -10,11 +10,16 @@ body {
   transition: background 400ms, color 400ms ease;
 }
 
-body.dark {
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+
+.App.dark {
   color: #f1f1f1;
   background: #000000;
 }
 
-body.dark #js-text {
+.App.dark #js-text {
   color: yellow;
 }

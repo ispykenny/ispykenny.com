@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ThemeSwitcher from './ThemeSwitcher';
 
-function Nav() {
+function Nav({theme, setTheme}) {
   let [navState, setNavState ] = useState(false);
   let [navListItems, setNavListItems ] = useState(false);
 
@@ -14,7 +14,7 @@ function Nav() {
   return (
     <div>
       <header className={ navState ? 'nav-showing' : '' }>
-        <ThemeSwitcher/>
+        <ThemeSwitcher theme={theme} setTheme={setTheme} />
         <div className="inner">
           <div className="nav">
             <div className="nav__item">
