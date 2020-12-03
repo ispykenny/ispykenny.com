@@ -8,9 +8,9 @@ function BlogListing(props) {
   const TimeStamp = (data) => {
     let postedDate = moment(data.time).format('MMMM Do YYYY')
     return (
-      <div>
+      <small>
         Posted on: {postedDate}
-      </div>
+      </small>
     )
   }
 
@@ -23,12 +23,14 @@ function BlogListing(props) {
         { props.posts.map((post, key) => (
           <div key={key}>
             <h4>{post.title.rendered}</h4>
-            <div dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}></div>
             <TimeStamp time={post.date}/>
+            <div dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}></div>
             <Link 
               to={`/${post.slug}`}>
                 View
             </Link>
+
+            <hr/>
           </div>
         ))}
       </div>

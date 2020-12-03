@@ -5,6 +5,7 @@
 @import './styles/home';
 @import './styles/components/theme-switcher';
 @import './styles/components/nav';
+@import './styles/components/blog-listing';
 
 body {
   transition: background 400ms, color 400ms ease;
@@ -13,6 +14,11 @@ body {
 .App {
   position: relative;
   min-height: 100vh;
+  transition: background 400ms, color 400ms ease;
+
+  &.light {
+    background-color: #f2f7fa;
+  }
 }
 
 .App.dark {
