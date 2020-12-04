@@ -1,0 +1,32 @@
+.article {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &__item:first-of-type {
+    width: 20%;
+    min-width: 100px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__item:last-of-type {
+    width: 78%;
+  }
+
+
+  &__item {
+    background: white;
+    border-radius: 8px;
+  }
+}
+
+.author__inner {
+  padding: 1em;
+}
+
+.article__inner {
+  padding: 3em;
+}

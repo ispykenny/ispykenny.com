@@ -14,6 +14,23 @@ function BlogListing({posts}) {
     )
   }
 
+  const Post = () => {
+    return (
+      posts.map((post, key) => (
+        <div key={key}>
+          <TimeStamp time={post.date}/>
+          <h4>{post.title.rendered}</h4>
+          <div dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}></div>
+          <Link 
+            to={`/${post.slug}`}
+            className="cta">
+              View
+          </Link>
+        </div>
+      ))
+    )
+  }
+
   return (
     <Inner>
       <div className="blog-listing">
@@ -24,19 +41,7 @@ function BlogListing({posts}) {
         </div>
       </div>
       <div className="blog-listing">
-        {console.log(posts)}
-        {posts.map((post, key) => (
-          <div key={key}>
-            <TimeStamp time={post.date}/>
-            <h4>{post.title.rendered}</h4>
-            <div dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}></div>
-            <Link 
-              to={`/${post.slug}`}
-              className="cta">
-                View
-            </Link>
-          </div>
-        ))}
+        <Post/>
       </div>
     </Inner>
   )
