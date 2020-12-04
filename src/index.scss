@@ -6,18 +6,19 @@
 @import './styles/components/theme-switcher';
 @import './styles/components/nav';
 @import './styles/components/blog-listing';
+@import './styles/components/cta';
 
 body {
-  transition: background 400ms, color 400ms ease;
+  transition: $themeTransition;
 }
 
 .App {
   position: relative;
   min-height: 100vh;
-  transition: background 400ms, color 400ms ease;
+  transition: $themeTransition;
 
   &.light {
-    background-color: #f2f7fa;
+    background-color: #f1f2f3;
   }
 }
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
-import Article from '../pages/Article';
+import Inner from './Grid';
 
-function BlogListing(props) {
+function BlogListing({posts}) {
 
   const TimeStamp = (data) => {
     let postedDate = moment(data.time).format('MMMM Do YYYY')
@@ -15,26 +15,30 @@ function BlogListing(props) {
   }
 
   return (
-    <div className="inner">
-      <h3 className="section-title">
-        Recent articles
-      </h3>
+    <Inner>
       <div className="blog-listing">
-        { props.posts.map((post, key) => (
+        <div>
+          <h3 className="section-title">
+            Recent articles
+          </h3>
+        </div>
+      </div>
+      <div className="blog-listing">
+        {console.log(posts)}
+        {posts.map((post, key) => (
           <div key={key}>
-            <h4>{post.title.rendered}</h4>
             <TimeStamp time={post.date}/>
+            <h4>{post.title.rendered}</h4>
             <div dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}></div>
             <Link 
-              to={`/${post.slug}`}>
+              to={`/${post.slug}`}
+              className="cta">
                 View
             </Link>
-
-            <hr/>
           </div>
         ))}
       </div>
-    </div>
+    </Inner>
   )
 }
 

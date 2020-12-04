@@ -28,8 +28,7 @@
 }
 
 #js-text {
-  color: #000000;
-  transition: background 400ms, color 400ms ease;
+  transition: $themeTransition;
 }
 
 

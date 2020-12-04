@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Inner from './Grid';
 import ThemeSwitcher from './ThemeSwitcher';
 
 function Nav({theme, setTheme}) {
@@ -15,7 +16,7 @@ function Nav({theme, setTheme}) {
     <div>
       <header className={ navState ? 'nav-showing' : '' }>
         <ThemeSwitcher theme={theme} setTheme={setTheme} />
-        <div className="inner">
+        <Inner>
           <div className="nav">
             <div className="nav__item">
               <Link to="/" className="logo" title="link to home page">
@@ -51,7 +52,7 @@ function Nav({theme, setTheme}) {
               </nav>
             </div>
           </div>
-        </div>
+        </Inner>
       </header>
 
       <div className="nav-stack"></div>
