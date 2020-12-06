@@ -27,7 +27,7 @@ const Socials = () => {
         <ul>
           { socials.map((social, index) => (
             <li key={index}>
-              <a rel="noopener" target="_blank" href={social.url}>{social.type}</a>
+              <a rel="noopener"  href={social.url}>{social.type}</a>
             </li>
           )) }
         </ul>

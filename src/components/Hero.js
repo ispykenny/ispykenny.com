@@ -8,7 +8,7 @@ function Hero({ title, copy, showSocial }) {
       <div className="content-area">
         <h1 className="page-title" dangerouslySetInnerHTML={{__html: title}}></h1>
         <p>{copy}</p>
-        { showSocial == true ?  <Socials/>  : '' }
+        { showSocial === true ?  <Socials/>  : '' }
       </div>
     </Inner>
   )

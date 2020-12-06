@@ -20,7 +20,7 @@ const ThemeSwitcher = ({theme , setTheme}) => {
       }
     }
 
-  }, [theme])
+  }, [theme, setTheme])
 
 
   const runThemeSwitch = event => {

@@ -21,7 +21,7 @@ function App() {
 
 
   return (
-    <div className={`App ${theme == 'true' ? 'dark' : 'light'}`}>
+    <div className={`App ${theme === 'true' ? 'dark' : 'light'}`}>
       <Router>
         <Nav
           setTheme={setTheme}
