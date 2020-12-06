@@ -1,12 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import me from '../assets/me.jpg'
 
+const Author = ({articles, currentPost}) => {
+  const AdditionalArticles = () => {
+    return (
+      <ul>
+        { articles.map((article, index) => (
+          <li key={index}>
+            <Link to={`/${article.slug}`}>{article.title.rendered}</Link>
+          </li>
+        )) }
+      </ul>
+    )
+  }
 
-const Author = ({articles}) => {
   return (
+    
     <div className="article__item">
       <div className="author__inner">
-        <img src="https://kennykrosky.com/wp-content/uploads/2019/01/github-1.jpg"/>
-        <p>Kenny Krosky</p>
+        <strong>Other articles ({ articles.length })</strong>
+        <AdditionalArticles/>
       </div>
     </div>
   )

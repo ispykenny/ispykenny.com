@@ -1,6 +1,7 @@
 import React, {useEffect, useState } from 'react';
 import LazyLoad from 'react-lazyload';
 import Author from '../components/Author';
+import dateCleaner from '../utils/date-cleaner';
 
 
 const Article = (props) => {
@@ -24,6 +25,7 @@ const Article = (props) => {
     return (
       <div className="article__item">
         <div className="article__inner">
+          <small>Posted on {dateCleaner(currentPost.date)}</small>
           <h1>{currentPost.title.rendered}</h1>
           <div dangerouslySetInnerHTML={{__html: currentPost.content.rendered}}></div>
         </div>
@@ -36,7 +38,10 @@ const Article = (props) => {
     if(currentPost.id) {
       return (
         <div className="article">
-          <Author articles={props.articles}/>
+          <Author 
+            articles={props.articles}
+            currentPost={currentPost}
+          />
           <CurrentPost/>
         </div>
       )

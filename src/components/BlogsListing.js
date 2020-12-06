@@ -2,14 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import Inner from './Grid';
+import dateCleaner from '../utils/date-cleaner';
 
 function BlogListing({posts}) {
 
-  const TimeStamp = (data) => {
-    let postedDate = moment(data.time).format('MMMM Do YYYY')
+  const TimeStamp = ({time}) => {
+    console.log('time->', time)
     return (
       <small>
-        Posted on: {postedDate}
+        Posted on: {dateCleaner(time)}
       </small>
     )
   }
