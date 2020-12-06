@@ -20,6 +20,13 @@ p {
 }
 
 
+a {
+  
+  &:focus {
+    outline: 2px solid $blue;
+  }
+}
+
 .section-title {
   font-size:  1.5em;
 }

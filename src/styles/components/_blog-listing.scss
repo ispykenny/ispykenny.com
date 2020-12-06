@@ -4,13 +4,17 @@
 }
 
 .blog-listing:first-of-type > div {
-  padding: 1.4em 2em;
+  padding: 0;
   margin-bottom: 0;
   background: none;
 }
 
+.dark .blog-listing:first-of-type > div {
+  background: none;
+}
+
 .blog-listing:first-of-type {
-  padding-bottom: 1em;
+  padding-bottom: 2em;
 }
 
 .blog-listing > div {

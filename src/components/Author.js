@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import me from '../assets/me.jpg'
 
 const Author = ({articles, currentPost}) => {
   const AdditionalArticles = () => {

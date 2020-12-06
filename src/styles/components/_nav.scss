@@ -89,6 +89,9 @@ nav.showing li {
 
 
 @media(min-width: $bp-md) {
+  header {
+    background: transparent !important;
+  }
   .nav {
     flex-direction: row;
     align-items: center;

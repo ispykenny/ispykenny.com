@@ -1,5 +1,4 @@
 import React, {useEffect, useState } from 'react';
-import LazyLoad from 'react-lazyload';
 import Author from '../components/Author';
 import dateCleaner from '../utils/date-cleaner';
 
@@ -15,10 +14,6 @@ const Article = (props) => {
         }
       })
     }
-    return () => {
-      setCurrentPost(null)
-    }
-
   }, [props]);
 
   const CurrentPost = () => {
@@ -57,9 +52,9 @@ const Article = (props) => {
 
   return (
     <div className="inner content-area">
-      <LazyLoad>
+      
         <RenderPost/>
-      </LazyLoad>
+      
     </div>
   )
 }

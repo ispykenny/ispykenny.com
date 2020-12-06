@@ -17,6 +17,14 @@
   }
 }
 
+.blogs .content-area {
+  padding: 4em 0em 2em 0em;
+
+  p {
+    margin-top: 1em;
+  }
+}
+
 #css-text {
   background: linear-gradient(
     45deg,
@@ -35,6 +43,10 @@
 @media(min-width: $bp-md) {
   .content-area {
     padding: 4em 0em;
+  }
+
+  .blogs .content-area {
+    padding: 4em 0em 2em 0em;
   }
   
 }

@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import BlogListing from '../components/BlogsListing';
 import Inner from '../components/Grid';
 import Hero from '../components/Hero';
 
-const Home = (props) => {
+const Blogs = (props) => {
   const [allBlogs, setAllBlogs] = useState({})
 
   useEffect(() => {
@@ -25,14 +25,15 @@ const Home = (props) => {
   }
 
   return (
-    <div className="home">
+    <div className="blogs">
       <Hero
-        title={`Hello 👋, I'm Kenny Krosky. I'm a front end developer enthusiastic about all things <span id="css-text">CSS</span> and <span id="js-text">JavaScript</span>.`} 
-        copy={`I'm a family man with two little girls and a rad wife. When I'm not coding or designing things for the web or software then I could usually be found sipping on a cup of coffee while playing some board games with my girls.`}
-        showSocial={true}/>
+        title="I try to write sometimes..."
+        copy="I write about tech, remote-working, and other randomness."
+        showSocial={false}
+      />
       <Posts/>
     </div>
   )
 }
 
-export default Home;
+export default Blogs;

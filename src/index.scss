@@ -1,5 +1,6 @@
 @import './styles/settings';
 @import './styles/vars';
+@import './styles//mixins';
 @import './styles/fonts';
 @import './styles/grid';
 @import './styles/home';
@@ -8,9 +9,15 @@
 @import './styles/components/nav';
 @import './styles/components/blog-listing';
 @import './styles/components/cta';
+@import './styles/components/social';
+@import './styles/components/footer';
 
 body {
   transition: $themeTransition;
+}
+
+.screen-reader {
+  @include sr-only();
 }
 
 .App {

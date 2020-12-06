@@ -39,7 +39,7 @@ function Nav({theme, setTheme}) {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link to="/blogs">
                       Blogs
                     </Link>
                   </li>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Cookies from 'js-cookie'
 import sunny from '../assets/sunny.svg';
 import dark from '../assets/dark.svg';

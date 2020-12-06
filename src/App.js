@@ -4,7 +4,8 @@ import Home from './pages/Home';
 import Article from './pages/Article';
 import Nav from "./components/Nav";
 import { fetchPosts } from "./utils/posts-fetcher";
-import Test from "./components/Test";
+import Footer from './components/Footer';
+import Blogs from "./pages/Blogs";
 
 function App() {
   const [posts, setPosts] = useState({});
@@ -33,10 +34,17 @@ function App() {
             render = {(props) => <Home blogs={posts}/> }
           />
           <Route
+            path="/blogs"
+            exact
+            render={(props) => <Blogs blogs={posts}/> }
+          />
+          <Route
             path="/:slug"
             render={(props) => <Article articles={posts} slug={props}/>}
           />
         </Switch>
+
+        <Footer/>
       </Router>
     </div>
   );
