@@ -28,7 +28,7 @@ const Blogs = (props) => {
     <div className="blogs">
       <Hero
         title="I try to write sometimes..."
-        copy="I write about tech, remote-working, and other randomness."
+        copy="<p>I write about tech, remote-working, and other randomness.</p>"
         showSocial={false}
       />
       <Posts/>
