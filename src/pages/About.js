@@ -1,5 +1,4 @@
 import React from 'react';
-import Inner from '../components/Grid';
 import Hero from '../components/Hero';
 
 
