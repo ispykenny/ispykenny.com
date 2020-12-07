@@ -6,6 +6,7 @@ import Nav from "./components/Nav";
 import { fetchPosts } from "./utils/posts-fetcher";
 import Footer from './components/Footer';
 import Blogs from "./pages/Blogs";
+import About from "./pages/About";
 
 function App() {
   const [posts, setPosts] = useState({});
@@ -37,6 +38,11 @@ function App() {
             path="/blogs"
             exact
             render={(props) => <Blogs blogs={posts}/> }
+          />
+          <Route
+            path="/about"
+            exact
+            component={About}
           />
           <Route
             path="/:slug"

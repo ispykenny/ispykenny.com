@@ -34,7 +34,7 @@ function Nav({theme, setTheme}) {
               <nav className={ navListItems ? 'showing' : '' }>
                 <ul>
                   <li>
-                    <Link to="/">
+                    <Link to="/about">
                       About me
                     </Link>
                   </li>
@@ -44,9 +44,9 @@ function Nav({theme, setTheme}) {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/">
+                    <a href="mailto:kenny.krosky@gmail.com.com">
                       Contact
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </nav>

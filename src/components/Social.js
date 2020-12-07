@@ -3,20 +3,20 @@ import React from 'react';
 const Socials = () => {
   const socials = [
     {
-      type: "Facebook",
-      url: "https://facebook.com"
-    },
-    {
       type: "Instagram",
-      url: "https://instagram.com"
+      url: "https://instagram.com/ispykenny"
     },
     {
       type: "Twitter",
-      url: "https://twitter.com"
+      url: "https://twitter.com/ispykenny"
     },
     {
       type: "Github",
-      url: "https://github.com"
+      url: "https://github.com/ispykenny"
+    },
+    {
+      type: "Behance",
+      url: "https://www.behance.net/kennykrosky"
     }
   ]
 
@@ -27,7 +27,7 @@ const Socials = () => {
         <ul>
           { socials.map((social, index) => (
             <li key={index}>
-              <a rel="noopener"  href={social.url}>{social.type}</a>
+              <a rel="noreferrer" target="_blank" href={social.url}>{social.type}</a>
             </li>
           )) }
         </ul>
