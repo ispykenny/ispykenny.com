@@ -1,3 +1,11 @@
+.nav-stack {
+  height: 78px;
+
+  @media(min-width: $bp-md) {
+    height: 100px;
+  }
+}
+
 header {
   position: absolute;
   top: 0; left: 0;
@@ -81,6 +89,9 @@ nav.showing li {
 
 
 @media(min-width: $bp-md) {
+  header {
+    background: transparent !important;
+  }
   .nav {
     flex-direction: row;
     align-items: center;

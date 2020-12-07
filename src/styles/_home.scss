@@ -1,5 +1,28 @@
 .content-area {
-  padding: 8em 0em 4em 0em;
+  padding: 4em 0em;
+
+  p {
+    margin-top: 2em;
+  }
+
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  figure {
+    margin: 0;
+  }
+}
+
+.blogs .content-area {
+  padding: 4em 0em 2em 0em;
+
+  p {
+    margin-top: 1em;
+  }
 }
 
 #css-text {
@@ -13,14 +36,17 @@
 }
 
 #js-text {
-  color: #000000;
-  transition: background 400ms, color 400ms ease;
+  transition: $themeTransition;
 }
 
 
 @media(min-width: $bp-md) {
   .content-area {
-    padding: 12em 0em 4em 0em;
+    padding: 4em 0em;
+  }
+
+  .blogs .content-area {
+    padding: 4em 0em 2em 0em;
   }
   
 }

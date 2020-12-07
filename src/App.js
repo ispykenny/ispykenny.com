@@ -4,9 +4,13 @@ import Home from './pages/Home';
 import Article from './pages/Article';
 import Nav from "./components/Nav";
 import { fetchPosts } from "./utils/posts-fetcher";
+import Footer from './components/Footer';
+import Blogs from "./pages/Blogs";
+import About from "./pages/About";
 
 function App() {
   const [posts, setPosts] = useState({});
+  const [theme, setTheme] = useState('false');
 
   useEffect(() => {
     async function fetchEndPoints() {
@@ -18,9 +22,12 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className={`App ${theme === 'true' ? 'dark' : 'light'}`}>
       <Router>
-        <Nav/>
+        <Nav
+          setTheme={setTheme}
+          theme={theme}
+        />
         <Switch>
           <Route 
             path="/" 
@@ -28,10 +35,22 @@ function App() {
             render = {(props) => <Home blogs={posts}/> }
           />
           <Route
+            path="/blogs"
+            exact
+            render={(props) => <Blogs blogs={posts}/> }
+          />
+          <Route
+            path="/about"
+            exact
+            component={About}
+          />
+          <Route
             path="/:slug"
             render={(props) => <Article articles={posts} slug={props}/>}
           />
         </Switch>
+
+        <Footer/>
       </Router>
     </div>
   );

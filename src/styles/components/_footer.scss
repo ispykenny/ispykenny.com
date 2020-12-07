@@ -1,0 +1,27 @@
+footer {
+  > .inner {
+    border-top: 1px solid #aaa;
+    padding: 1em 0em;
+
+    p {
+      margin-bottom: 0;
+      font-size: 15px;
+    }
+  }
+}
+
+.source-code {
+  display: flex;
+  align-items: center;
+  padding: 1em 0em;
+  color: black;
+
+  p {
+    margin: 0;
+    margin-left: 10px;
+  }
+}
+
+.dark .source-code {
+  color: white;
+}

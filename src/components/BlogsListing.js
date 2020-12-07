@@ -1,38 +1,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import moment from 'moment';
-import Article from '../pages/Article';
+import Inner from './Grid';
+import dateCleaner from '../utils/date-cleaner';
 
-function BlogListing(props) {
+function BlogListing({posts}) {
 
-  const TimeStamp = (data) => {
-    let postedDate = moment(data.time).format('MMMM Do YYYY')
+  const Post = () => {
     return (
-      <div>
-        Posted on: {postedDate}
-      </div>
+      posts.map((post, key) => (
+        <div key={key} tabindex="0">
+          <small>Posted on {dateCleaner(post.date)}</small>
+          <h4>{post.title.rendered}</h4>
+          <div dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}></div>
+          <Link 
+            to={`/${post.slug}`}
+            className="cta">
+              View
+          </Link>
+        </div>
+      ))
     )
   }
 
   return (
-    <div className="inner">
-      <h3 className="section-title">
-        Recent articles
-      </h3>
+    <Inner>
       <div className="blog-listing">
-        { props.posts.map((post, key) => (
-          <div key={key}>
-            <h4>{post.title.rendered}</h4>
-            <div dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}></div>
-            <TimeStamp time={post.date}/>
-            <Link 
-              to={`/${post.slug}`}>
-                View
-            </Link>
-          </div>
-        ))}
+        <div>
+          <h3 className="section-title">
+            Recent articles
+          </h3>
+        </div>
       </div>
-    </div>
+      <div className="blog-listing">
+        <Post/>
+      </div>
+    </Inner>
   )
 }
 

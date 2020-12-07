@@ -1,20 +1,40 @@
 @import './styles/settings';
 @import './styles/vars';
+@import './styles//mixins';
 @import './styles/fonts';
 @import './styles/grid';
 @import './styles/home';
+@import './styles/blog-single';
 @import './styles/components/theme-switcher';
 @import './styles/components/nav';
+@import './styles/components/blog-listing';
+@import './styles/components/cta';
+@import './styles/components/social';
+@import './styles/components/footer';
 
 body {
-  transition: background 400ms, color 400ms ease;
+  transition: $themeTransition;
 }
 
-body.dark {
+.screen-reader {
+  @include sr-only();
+}
+
+.App {
+  position: relative;
+  min-height: 100vh;
+  transition: $themeTransition;
+
+  &.light {
+    background-color: #f1f2f3;
+  }
+}
+
+.App.dark {
   color: #f1f1f1;
   background: #000000;
 }
 
-body.dark #js-text {
+.App.dark #js-text {
   color: yellow;
 }

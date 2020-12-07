@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Cookies from 'js-cookie'
 import sunny from '../assets/sunny.svg';
 import dark from '../assets/dark.svg';
-function ThemeSwitcher() {
-  const [theme, swapTheme] = useState("")
+
+const ThemeSwitcher = ({theme , setTheme}) => {
 
   useEffect(() => {
     let settings = Cookies.get('kenny-theme');
@@ -11,30 +11,26 @@ function ThemeSwitcher() {
     if(settings) {
       if(settings === "true") {
         document.querySelector("#changeTheme").checked = true
-        swapTheme("true")
-        document.getElementsByTagName('body')[0].className = 'dark';
+        setTheme("true")
       } 
   
       if(settings === "false") {
-        swapTheme("false")
+        setTheme("false")
         document.querySelector("#changeTheme").checked = false
-        document.getElementsByTagName('body')[0].className = 'light';
       }
     }
 
-  }, [theme])
+  }, [theme, setTheme])
 
 
   const runThemeSwitch = event => {
     if(event.currentTarget.checked === true) {
       Cookies.set('kenny-theme', "true")
-      swapTheme("true")
+      setTheme("true")
     } else {
       Cookies.set('kenny-theme', "false")
-      swapTheme("false")
+      setTheme("false")
     }
-    const addedClass = theme === "false" ? 'light' : 'dark'
-    document.getElementsByTagName('body')[0].className = addedClass;
   }
 
   const Icon = () => {
