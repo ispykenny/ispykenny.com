@@ -23,11 +23,11 @@ function Nav({theme, setTheme}) {
                 Kenny Krosky
               </Link>
 
-              <button onClick={toggleMobileNav}>
+              <button id="menu-trigger" onClick={toggleMobileNav}>
                 <span className="screen-reader">Toggle Mobile Menu</span>
-                <span></span>
-                <span></span>
-                <span></span>
+                <span className="burger-span"></span>
+                <span className="burger-span"></span>
+                <span className="burger-span"></span>
               </button>
             </div>
             <div className='nav__item nav-parent'>
