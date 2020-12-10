@@ -35,9 +35,9 @@ const ThemeSwitcher = ({theme , setTheme}) => {
 
   const Icon = () => {
     if(theme === "true") {
-      return <div className="theme-switcher__icon"><img src={sunny} alt="sun icon"/></div>
+      return <div className="theme-switcher__icon"><img src={sunny} alt="sun icon" height="22px" width="22px"/></div>
     } else {
-      return <div className="theme-switcher__icon"><img src={dark} alt="moon icon"/></div>
+      return <div className="theme-switcher__icon"><img src={dark} alt="moon icon" height="22px" width="22px"/></div>
     }
   }
 
