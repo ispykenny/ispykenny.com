@@ -7,19 +7,17 @@ const Instagram = () => {
 
   useEffect(() => {
     const fetchFeed = async () => {
-      let feed = await fetchFeeder()
-      setInstaFeed(feed)
-      console.log(feed, 'here')
+      let feed = await fetchFeeder('https://www.instagram.com/ispykenny/?__a=1')
+      // setInstaFeed(feed)
+      console.log(feed)
     }
 
     fetchFeed();
-  }, [instafeed])
+  }, [])
 
-  const fetchFeeder = () => {
-    axios('https://www.instagram.com/ispykenny/?__a=1')
-    .then(res => console.log(res))
+  const fetchFeeder = (url) =>  axios(url)
+    .then(result => result)
     .catch((erro) => console.log(erro))
-  }
 
   return (
     <div>

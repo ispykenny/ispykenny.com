@@ -7,6 +7,7 @@ import { fetchPosts } from "./utils/posts-fetcher";
 import Footer from './components/Footer';
 import Blogs from "./pages/Blogs";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   const [posts, setPosts] = useState({});
@@ -43,6 +44,11 @@ function App() {
             path="/about"
             exact
             component={About}
+          />
+          <Route
+            path="/contact"
+            exact
+            component={Contact}
           />
           <Route
             path="/:slug"
