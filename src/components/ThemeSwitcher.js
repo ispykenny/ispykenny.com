@@ -47,7 +47,7 @@ const ThemeSwitcher = ({theme , setTheme}) => {
         <div className="theme-switcher__inner">
           <Icon/>
           <input id="changeTheme" type="checkbox" onChange={runThemeSwitch} tabIndex="0"/>
-          <label for="changeTheme">
+          <label htmlFor="changeTheme">
             <span className="screen-reader">Toggle Dark and Light Mode</span>
             <div 
               className={`theme-switcher__bar ${theme === "true" ? 'active' : '' }`}>

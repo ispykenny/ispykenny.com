@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Blogs from "./pages/Blogs";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Work from "./pages/Work";
 
 function App() {
   const [posts, setPosts] = useState({});
@@ -44,6 +45,11 @@ function App() {
             path="/about"
             exact
             component={About}
+          />
+          <Route
+            path="/work"
+            exact
+            component={Work}
           />
           <Route
             path="/contact"

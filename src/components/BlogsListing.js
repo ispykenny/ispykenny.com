@@ -8,7 +8,7 @@ function BlogListing({posts}) {
   const Post = () => {
     return (
       posts.map((post, key) => (
-        <div key={key} tabindex="0">
+        <div key={key} tabIndex="0">
           <small>Posted on {dateCleaner(post.date)}</small>
           <h4>{post.title.rendered}</h4>
           <div dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}></div>

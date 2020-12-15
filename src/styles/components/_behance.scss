@@ -1,0 +1,13 @@
+.behance {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__item {
+    width: 32%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
