@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import Inner from '../components/Grid';
+import React from 'react';
 import Hero from '../components/Hero';
 
 
