@@ -20,7 +20,11 @@ function Nav({theme, setTheme}) {
           <div className="nav">
             <div className="nav__item">
               <Link to="/" className="logo" title="link to home page">
-                Kenny Krosky
+                <div className="avatar">
+                  <div className="avatar__el">
+                
+                  </div>
+                </div>
               </Link>
 
               <button id="menu-trigger" onClick={toggleMobileNav}>
@@ -34,17 +38,17 @@ function Nav({theme, setTheme}) {
               <nav className={ navListItems ? 'showing' : '' }>
                 <ul>
                   <li>
-                    <Link to="/about" onClick={toggleMobileNav}>
+                    <Link to="/about">
                       About me
                     </Link>
                   </li>
                   <li>
-                    <Link to="/blogs" onClick={toggleMobileNav}>
+                    <Link to="/blogs">
                       Blogs
                     </Link>
                   </li>
                   <li>
-                    <a href="mailto:kenny.krosky@gmail.com.com" onClick={toggleMobileNav}>
+                    <a href="mailto:kenny.krosky@gmail.com.com">
                       Contact
                     </a>
                   </li>

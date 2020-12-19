@@ -11,6 +11,7 @@
 @import './styles/components/cta';
 @import './styles/components/social';
 @import './styles/components/footer';
+@import './styles/components/behance';
 
 body {
   transition: $themeTransition;
@@ -26,7 +27,7 @@ body {
   transition: $themeTransition;
 
   &.light {
-    background-color: #f1f2f3;
+    background-color: #ffffff;
   }
 }
 

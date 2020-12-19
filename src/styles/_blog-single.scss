@@ -21,9 +21,14 @@
 
   &__item {
     width: 100%;
-    background: white;
+    background: #f5f5f5;
     border-radius: 8px;
   }
+}
+
+.article__item a {
+  color: $blue;
+  font-weight: 700;
 }
 
 .dark {

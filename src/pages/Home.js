@@ -7,6 +7,7 @@ const Home = (props) => {
   const [allBlogs, setAllBlogs] = useState({})
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     if(props.blogs.length >= 1) {
       setAllBlogs(props.blogs);
     }

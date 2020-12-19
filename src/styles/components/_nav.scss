@@ -2,8 +2,35 @@
   height: 78px;
 
   @media(min-width: $bp-md) {
-    height: 100px;
+    height: 120px;
   }
+}
+
+
+.avatar {
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  background: linear-gradient(
+    45deg,
+    #0F5BFC,
+    #E81EF5
+  );
+  overflow: hidden;
+  position: relative;
+}
+
+.avatar__el {
+  height: 80%;
+  width: 80%;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('https://avatars3.githubusercontent.com/u/15894356?s=460&u=118ce796d5f3016317cbe6da7e6ebed39d641cd1&v=4');
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
 header {
@@ -187,7 +214,7 @@ nav.showing li {
     color: $blue;
   }
 
-  .logo:active {
+  .logo:focus {
     transform: translateY(1px);
     position: relative;
     display: inline-block;
