@@ -19,12 +19,11 @@ p {
   line-height: 1.4;
 }
 
-
 a {
   
-  &:focus {
-    outline: 2px solid $blue;
-  }
+  // &:focus {
+  //   outline: 2px solid $blue;
+  // }
 }
 
 .section-title {
