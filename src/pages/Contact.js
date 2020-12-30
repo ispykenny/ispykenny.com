@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <Inner>
       <div style={{margin: 40}}>
-      <form name="contact" method="POST" netlify="true" action="/result">
+      <form name="contact" method="POST" netlify="true">
         <input type="text" name="name" />
         <input type="email" name="email" />
         <textarea name="message"></textarea>
