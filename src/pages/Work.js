@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import WorkList from '../components/WorkList';
 
 
 const Work = () => {
@@ -10,6 +11,7 @@ const Work = () => {
         copy="<p>Tools used by 100k+ users a month at large scale.</p>"
         hasSocial={false}
       />
+      <WorkList/>
     </>
   )
 }
