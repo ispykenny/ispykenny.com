@@ -6,8 +6,8 @@ const Contact = () => {
   return (
     <Inner>
       <div style={{margin: 40}}>
-      <form name="contact" netlify="true">
-      <input type="hidden"method="POST" name="form-name" value="contact" />
+      <form name="contact" netlify="true" method="POST">
+      <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>Your Name: <input type="text" name="name"/></label>
           </p>
