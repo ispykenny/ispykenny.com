@@ -52,7 +52,7 @@ function App() {
             component={Work}
           />
           <Route
-            path="/contact"
+            path="/letstalk"
             component={Contact}
           />
           <Route
