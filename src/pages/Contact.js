@@ -6,12 +6,26 @@ const Contact = () => {
   return (
     <Inner>
       <div style={{margin: 40}}>
+      <form name="contact" netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+
       <form name="contact" method="POST" netlify="true">
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <textarea name="message"></textarea>
-        <input type="hidden" name="form-name" value="contact" />
-        <button type="submit">Send</button>
+      <input type="hidden" name="contact" value="contact" />
+          <p>
+            <label>Your Name: <input type="text" name="name"/></label>
+          </p>
+          <p>
+            <label>Your Email: <input type="email" name="email"/></label>
+          </p>
+          <p>
+            <label>Message: <textarea name="message"></textarea></label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
       </form>
     </div>
     </Inner>
