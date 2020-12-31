@@ -48,9 +48,9 @@ function Nav({theme, setTheme}) {
                     </Link>
                   </li>
                   <li>
-                    <a href="mailto:kenny.krosky@gmail.com.com" onClick={toggleMobileNav}>
+                    <Link to="/letstalk" onClick={toggleMobileNav}>
                       Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>

@@ -1,0 +1,73 @@
+.contact {
+  form, input,textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 2em;
+    font-weight: 800;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    height: 50px;
+    border: 1px solid #444;
+    font-size: 22px;
+    padding: 0em 10px;
+    outline-offset: 5px;
+    outline-color: $blue;
+    margin: 0;
+    margin-top: 1em;
+    -webkit-appearance: none;
+    border-radius: 0px;
+  }
+
+  textarea {
+    min-height: 150px;
+    margin-top: 1em;
+    padding: 10px;
+    border: 1px solid #444;
+    font-size: 22px;
+    outline-offset: 5px;
+    outline-width: 3px;
+    outline-color: $blue !important;
+    -webkit-appearance: none;
+    border-radius: 0px;
+  }
+
+  button {
+    background: $blue;
+    color: white;
+    display: inline-block;
+    padding: 1em 3em;
+    font-size: 16px;
+    border-radius: 50px;
+    border: none;
+    margin-bottom: 6em;
+    font-weight: 800;
+    -webkit-appearance: none;
+    position: relative;
+    outline: none;
+
+    &:after {
+      content: '';
+      display: none;
+      position: absolute;
+      top: -10%;
+      left: -5%;
+      height: 120%;
+      width: 110%;
+      box-sizing: border-box;
+      border: 3px solid $blue;
+      border-radius: 50px;
+    }
+
+    &:active, &:focus {
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
