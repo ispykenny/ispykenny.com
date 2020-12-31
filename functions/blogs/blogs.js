@@ -7,15 +7,22 @@ const client = contentful.createClient({
   accessToken: process.env.APIKEY
 });
 
-const theThing = async () => {
-  return client.getEntries("Vd0IZq9i5l1imkqw")
-    .then(entry => entry)
-    .catch(err => console.log(err));
+
+const theThing = async (contentType) => {
+  if(contentType === "all") {
+    return client.getEntries("Vd0IZq9i5l1imkqw")
+      .then(entry => entry)
+      .catch(err => console.log(err));
+  } else {
+    return {
+      
+    }
+  }
 }
 
 const handler = async (event) => {
   console.log(event.queryStringParameters.type)
-  let theData = await theThing();
+  let theData = await theThing('all');
     try {
       return {
         statusCode: 200,
