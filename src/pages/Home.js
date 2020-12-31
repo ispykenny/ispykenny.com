@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import BlogListing from '../components/BlogsListing';
 import Inner from '../components/Grid';
 import Hero from '../components/Hero';
+import axios from 'axios'
 
 const Home = (props) => {
   const [allBlogs, setAllBlogs] = useState({})
@@ -12,6 +13,15 @@ const Home = (props) => {
       setAllBlogs(props.blogs);
     }
   }, [props]);
+
+
+  const checkSomething = () => {
+    axios('/.netlify/functions/blogs')
+    .then((res) => console.log(res.data))
+    .catch((err) => console.log(err))
+  }
+
+  checkSomething();
 
   const Posts = () => {
     if(allBlogs.length >= 1) {
