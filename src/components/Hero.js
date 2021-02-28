@@ -4,7 +4,7 @@ import Socials from './Social';
 
 function Hero({ title, copy, showSocial }) {
   return (
-    <Inner>
+    <Inner class="inner-narrow">
       <div className="content-area">
         <h1 className="page-title" dangerouslySetInnerHTML={{__html: title}}></h1>
         <div dangerouslySetInnerHTML={{__html: copy}}></div>

@@ -28,10 +28,9 @@ const Home = (props) => {
   return (
     <div className="home">
       <Hero
-        title={`Hello 👋, I'm Kenny Krosky. I'm a front end developer enthusiastic about all things <span id="css-text">CSS</span> and <span id="js-text">JavaScript</span>.`} 
+        title={`Hello 👋, I'm Kenny Krosky. I'm a front end engineer and UX Designer.`} 
         copy="<p>I'm a family man with two little girls and a rad wife. When I'm not coding or designing things for the web or software then I could usually be found sipping on a cup of coffee while playing some board games with my girls.</p>"
-        showSocial={true}/>
-      <Posts/>
+        showSocial={false}/>
     </div>
   )
 }
