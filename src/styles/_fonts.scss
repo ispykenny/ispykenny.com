@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;800&display=swap');
 
 body {
-  font-family: 'Lora', serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
   margin: 0;
-  color: #222;
+  color: $primaryColor;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,13 +17,6 @@ p {
   font-size: 2em;
   margin: 0;
   line-height: 1.4;
-}
-
-a {
-  
-  // &:focus {
-  //   outline: 2px solid $blue;
-  // }
 }
 
 .section-title {

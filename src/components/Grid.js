@@ -2,7 +2,7 @@ import React from 'react';
 
 const Inner = props => {
   return (
-    <div className="inner">
+    <div className={props.class}>
       {props.children}
     </div>
   )

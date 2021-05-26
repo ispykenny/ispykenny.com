@@ -1,8 +1,25 @@
 .content-area {
   padding: 6em 0em 4em 0em;
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+
+  h1 {
+    font-weight: 800;
+  }
 
   p {
-    margin-top: 2em;
+    margin-top: 1.4em;
+    font-size: 1em;
+    color: $primaryColor;
+
+    a {
+      color: $primaryColor;
+    }
+
+    @media(min-width: $bp-md) {
+      font-size: 1.2em;
+    }
   }
 
 
@@ -25,20 +42,9 @@
   }
 }
 
-#css-text {
-  background: linear-gradient(
-    45deg,
-    #0F5BFC,
-    #E81EF5
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 #js-text {
   transition: $themeTransition;
 }
-
 
 @media(min-width: $bp-md) {
   .content-area {

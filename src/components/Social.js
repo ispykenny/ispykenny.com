@@ -23,7 +23,6 @@ const Socials = () => {
   return (
     <div className="social">
       <div className="social__inner">
-        <h2>Follow me here:</h2>
         <ul>
           { socials.map((social, index) => (
             <li key={index}>

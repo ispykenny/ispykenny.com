@@ -12,8 +12,9 @@
 @import './styles/components/social';
 @import './styles/components/footer';
 @import './styles/components/behance';
+@import './styles/components/st';
+@import './styles/components/cards';
 @import './styles/components/form';
-
 body {
   transition: $themeTransition;
 }
@@ -25,16 +26,10 @@ body {
 .App {
   position: relative;
   min-height: 100vh;
-  transition: $themeTransition;
 
   &.light {
     background-color: #ffffff;
   }
-}
-
-.App.dark {
-  color: #f1f1f1;
-  background: #000000;
 }
 
 .App.dark #js-text {
