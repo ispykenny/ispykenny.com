@@ -40,6 +40,7 @@ nav ul {
       text-decoration: none;
       color: $primaryColor;
       font-weight: 800;
+      font-size: 14px;
     }
 
     &:first-of-type {
@@ -88,6 +89,9 @@ nav ul {
   }
 }
 
+.nav .cta {
+  display: flex !important;
+}
 @media(min-width: 540px) {
   .nav-parent {
     display: flex;
@@ -114,6 +118,14 @@ nav ul {
       &:first-of-type {
         margin-left: 0;
       }
+
+      a {
+        font-size: 17px;
+      }
     }
   }
+}
+
+@media(min-width: $bp-xl) {
+
 }
