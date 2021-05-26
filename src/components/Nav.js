@@ -1,16 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import Inner from './Grid';
-import ThemeSwitcher from './ThemeSwitcher';
 
-function Nav({theme, setTheme}) {
-  let [navState, setNavState ] = useState(false);
-  let [navListItems, setNavListItems ] = useState(false);
-
-  const toggleMobileNav = () => {
-    setNavState(!navState)
-    setTimeout(() => setNavListItems(!navListItems))
-  }
+function Nav() {
 
   return (
     <div>
@@ -23,8 +14,8 @@ function Nav({theme, setTheme}) {
             <div className="nav__element">
               <nav>
                 <ul>
-                  <li><a href="https://www.behance.net/kennykrosky" target="_blank">Behance</a></li>
-                  <li><a className="cta" href="https://github.com/ispykenny" target="_blank">
+                  <li><a href="https://www.behance.net/kennykrosky" target="_blank" rel="noreferrer">Behance</a></li>
+                  <li><a className="cta" href="https://github.com/ispykenny" target="_blank" rel="noreferrer">
                     <span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></span>
                     <span>Github</span></a></li>
                 </ul>
@@ -33,7 +24,6 @@ function Nav({theme, setTheme}) {
           </div>
         </div>
       </header>
-
       <div className="nav-stack"></div>
     </div>
   )
