@@ -29,6 +29,11 @@ const Projects = () => {
       description: '<p>Affliate Marketing Landing Page</p> <p>Tools used: <strong>React</strong>, <strong>Contentful CMS</strong>, <strong>Netlify Serverless Functions</strong></p>'
     },
     {
+      name: 'Digital Me',
+      url: 'https://digitalme.space/u/ispykenny',
+      description: '<p>Web application to allow users to sign up and store important links.</p><p>Tools used:</p><strong>PHP</strong>, <strong>MySql</strong>, <strong>JavaScript</strong>'
+    },
+    {
       name: 'Kannaco (wholesale)',
       url: 'https://wholesale.kannacocbd.com/',
       description: '<p>Custom <strong>Shopify</strong> theme with a custom Side-Cart Ajax feature.</p><p>Tools used:</p><strong>Liquid</strong>, <strong>Vanilla JS</strong>, <strong>SCSS</strong>'
