@@ -1,0 +1,22 @@
+.st {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform 500ms ease;
+  }
+}
+
+.loaded {
+  .st span {
+    transform: translateY(0);
+  }
+}
+
+.page-title {
+  line-height: 1.2;
+}

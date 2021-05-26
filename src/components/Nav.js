@@ -18,7 +18,7 @@ function Nav({theme, setTheme}) {
         <div className="inner nav-parent">
           <div className="nav">
             <div className="nav__element">
-              <a href="/" className="nav__logo">Kenny Krosky</a>
+              <Link to="/" className="nav__logo">Kenny Krosky</Link>
             </div>
             <div className="nav__element">
               <nav>

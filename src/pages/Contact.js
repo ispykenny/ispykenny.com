@@ -1,18 +1,27 @@
+
 import React from 'react';
+import Inner from '../components/Grid';
+import Hero from '../components/Hero'
 
 const Contact = () => {
+  
   return (
-    <div>
-      <form name="contact" method="POST" data-netlify="true">
-        <input type="email" name="email" id="email"/>
-        <label for="email">Enter Email</label>
-        <br/>
-        <textarea id="message"></textarea>
-        <label for="message">Enter Message</label>
-        <br/>
-        <input type="hidden" name="form-name" value="contact"/>
-        <button type="submit">Submit</button>
-      </form>
+      <div className='contact'>
+      <Hero
+        title="Let's Connect 🤙"
+        copy="<p>Super active on any of these social media channels so feel free to reach me there or fill out the form below.</p>"
+        showSocial={true}
+        cta={false}
+        />
+      <Inner class="inner inner-narrow">
+        <form name="contact" netlify="true" method="POST">
+          <input type="hidden" name="form-name" value="contact" />
+          <label>Your Name: <input type="text" name="name"/></label>
+          <label>Your Email: <input type="email" name="email"/></label>
+          <label>Message: <textarea name="message"></textarea></label>
+          <button type="submit">Send</button>  
+        </form>
+      </Inner>
     </div>
   )
 }
