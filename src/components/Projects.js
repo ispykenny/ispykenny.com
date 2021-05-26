@@ -35,17 +35,17 @@ const Projects = () => {
     },
     {
       name: 'Pixels',
-      url: 'google.com',
+      url: 'https://adobe.com/go/cc_plugins_discover_plugin?pluginId=de6be381&workflow=share',
       description: '<p>Adobe XD JavaScript plugin with over 70k monthly image downloads.</p><p>Tools Used: <strong>Node Js</strong>, <strong>Unsplash API</strong></p>'
     },
     {
       name: 'DexHub',
-      url: 'google.com',
+      url: 'https://dex-hub.herokuapp.com/',
       description: '<p>Web Application to display blood glucose results for Type 1 Diabetics.</p><p>Tools used: <strong>Node Js</strong>, <strong>Firebase AUTH</strong>, <strong>Dexcom API</strong></p>'
     },
     {
       name: 'Tasklist',
-      url: 'google.com',
+      url: 'https://adobe.com/go/cc_plugins_discover_plugin?pluginId=4e1ee53d&workflow=share',
       description: '<p>Adobe XD JavaScript plugin.</p><p> Reads, Writes, and Updates TO-DO list.</p>'
     }
   ];

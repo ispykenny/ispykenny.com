@@ -10,7 +10,6 @@
 
   p {
     margin-top: 1.4em;
-    // font-weight: 700;
     font-size: 1em;
     color: $primaryColor;
 
@@ -43,20 +42,9 @@
   }
 }
 
-#css-text {
-  background: linear-gradient(
-    45deg,
-    #0F5BFC,
-    #E81EF5
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 #js-text {
   transition: $themeTransition;
 }
-
 
 @media(min-width: $bp-md) {
   .content-area {

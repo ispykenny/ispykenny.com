@@ -4,6 +4,7 @@
   &__inner {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
 
 
@@ -50,10 +51,5 @@
       padding-top: 0;
     }
 
-    li {
-      &:first-of-type {
-        margin-left: 1.5em;
-      }
-    }
   }
 }

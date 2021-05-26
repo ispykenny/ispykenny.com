@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Inner from './Grid';
 import Socials from './Social';
 
-function Hero({ title, copy, showSocial }) {
+function Hero({ title, copy, showSocial , cta }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -18,9 +18,9 @@ function Hero({ title, copy, showSocial }) {
         <h1 className={`page-title ${mounted? 'loaded': ''}`} dangerouslySetInnerHTML={{__html: title}}></h1>
         <div dangerouslySetInnerHTML={{__html: copy}}></div>
         { showSocial === true ?  <Socials/>  : '' }
-        <Link to="/letstalk" className="cta">
+        {cta ? <Link to="/letstalk" className="cta">
           🤙 Let's Talk
-        </Link>
+        </Link> : ''}
       </div>
     </Inner>
   )
