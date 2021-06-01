@@ -9,6 +9,11 @@ const Projects = () => {
 
   let project = [
     {
+      name: 'Dribbbler Players Card',
+      url: 'https://dribbbler-players-card.netlify.app/',
+      description: '<p>A web application that generates a sports-card-like card with user stats and generates a .jpg image of your card.</p><p>Tools used: <strong>React</strong>, <strong>Node.js</strong>, <strong>SCSS</strong>, <strong>Dribbble API</strong></p>'
+    },
+    {
       name: 'Shredlights',
       url: 'http://kennykrosky.com/shredlights/',
       description: '<p>Static site for a marketing page.</p><p>Tools used: <strong>JavaScript</strong>, <strong>SCSS</strong></p>'
