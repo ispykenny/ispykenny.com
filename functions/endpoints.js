@@ -30,10 +30,10 @@ const handler = async (event) => {
   if(query === "rebuild") {
     fs.writeFile('public/localendpoint.js', JSON.stringify(data), function (err) {
       if (err) throw err;
-      axios.post(`https://api.netlify.com/build_hooks/${process.env.DEPLOY}`)
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err))
     });
+    axios.post(`https://api.netlify.com/build_hooks/${process.env.DEPLOY}`)
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err))
   }
   return {
     statusCode: 200,
