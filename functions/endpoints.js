@@ -20,6 +20,9 @@ const fetchData = async (type) => {
           if (err) throw err;
           console.log('Saved!');
         });
+        axios.post(`https://api.netlify.com/build_hooks/${process.env.DEPLOY}`)
+        .then((res) =>  console.log(res))
+        .catch((err) => console.log(err))
       })
       .catch(err => console.log(err))  
   }
