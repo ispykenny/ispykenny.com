@@ -1,8 +1,9 @@
+require('dotenv').config();
 const fs = require('fs')
 
 const contentful = require("contentful");
 const axios = require('axios');
-
+console.log(process.env.WAP)
 const client = contentful.createClient({
   space: "t1u1jb3v81x6",
   accessToken: process.env.WAP
@@ -11,6 +12,7 @@ const client = contentful.createClient({
 
 const fetchData = async (type) => {
   if(type === "rebuild") {
+    console.log("H!",process.env.WAP)
    return client
     .getEntries({
         'content_type': 'title'
