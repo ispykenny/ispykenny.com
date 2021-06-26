@@ -9,12 +9,28 @@ import Blogs from "./pages/Blogs";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Work from "./pages/Work";
+import axios from 'axios'
+
+// const data = require('/.netlify/functions/localendpoint.json');
+// console.log(data)
+const fetch_some_data = () => axios('/localendpoint.js')
+// const fetch_some_data = () => axios('/.netlify/functions/endpoints?type=rebuild')
+  .then((res) => {
+    console.log(res, 'wee')
+  })
+  .catch((error) => console.log(error))
+
+
+  fetch_some_data();
+
 
 function App() {
   const [posts, setPosts] = useState({});
   const [theme, setTheme] = useState('false');
 
   useEffect(() => {
+    // fetch_some_data().then((res) => console.log(res))
+
     async function fetchEndPoints() {
       let getPosts = await fetchPosts('https://kennykrosky.com/wp-json/wp/v2/posts')
       setPosts(getPosts)
