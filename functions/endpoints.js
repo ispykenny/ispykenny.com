@@ -33,7 +33,7 @@ const handler = async (event) => {
     fs.writeFile('public/localendpoint.js', JSON.stringify(data), function (err) {
       if (err) throw err;
     });
-    axios.post(`https://api.netlify.com/build_hooks/${process.env.DEPLOY}`)
+    axios.post(`https://api.netlify.com/build_hooks/${process.env.DEPLOY}`, {}, null)
     .then((res) => console.log(res))
     .catch((err) => console.log(err))
   }

@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Work from "./pages/Work";
 import axios from 'axios'
+// import Purge from "./pages/Purge";
 
 // const data = require('/.netlify/functions/localendpoint.json');
 // console.log(data)
@@ -76,6 +77,10 @@ const fetch_some_data = () => axios('/localendpoint.js')
             path="/:slug"
             render={(props) => <Article articles={posts} slug={props}/>}
           />
+          {/* <Route
+            path="/purge"
+            render={() => <Purge />}
+          /> */}
         </Switch>
 
         <Footer/>
