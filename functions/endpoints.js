@@ -28,7 +28,7 @@ const handler = async (event) => {
   const data = await fetchData(query);
   
   if(query === "rebuild") {
-    fs.writeFile('localendpoint.js', JSON.stringify(data), function (err) {
+    fs.writeFile('/localendpoint.js', JSON.stringify(data), function (err) {
       if (err) throw err;
     });
     axios.post(`https://api.netlify.com/build_hooks/${process.env.DEPLOY}`, {}, null)
