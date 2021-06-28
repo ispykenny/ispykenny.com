@@ -37,8 +37,12 @@
     position: absolute;
     top: 20px; right: 20px;
     z-index: 9;
-    transform: translate(-10px, 10px);
-    opacity: 0;
+    
+    @media(min-width:$bp-md) {
+      transform: translate(-10px, 10px);
+      opacity: 0;
+
+    }
 
     svg {
       width: 100%;

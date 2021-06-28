@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import Me from '../assets/me.jpg'
-const Home = (props) => {
+const Home = () => {
   return (
     <div className="home">
       <Hero

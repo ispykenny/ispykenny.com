@@ -64,8 +64,9 @@ nav ul {
 }
 
 nav .cta {
-  padding: 0.6em 2em;
+  padding: 0.4em 1.4em;
   margin-left: 4px;
+  font-size: 12px;
 }
 
 .cta {
@@ -86,6 +87,7 @@ nav .cta {
   svg {
     position: relative;
     top: 2px;
+    width: 16px;
   }
 
   span:first-of-type {
@@ -132,4 +134,10 @@ nav .cta {
       }
     }
   }
+  nav .cta {
+    padding: 0.6em 2em;
+    margin-left: 4px;
+    font-size: 15px;
+  }
+  
 }
