@@ -29,7 +29,7 @@ const Projects = () => {
       description: '<p>Custom WordPress theme with Stripe (API) payment intergration.</p> <p>Tools used: <strong>PHP</strong>, <strong>JavaScript</strong>, <strong>SCSS</strong></p>'
     },
     {
-      name: 'Browse Miniaml',
+      name: 'Browse Minimal',
       url: 'https://browseminimal.com',
       description: '<p>Affliate Marketing Landing Page</p> <p>Tools used: <strong>React</strong>, <strong>Contentful CMS</strong>, <strong>Netlify Serverless Functions</strong></p>'
     },

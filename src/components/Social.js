@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Socials = () => {
+const Socials = ({showSocial}) => {
   const socials = [
     {
       type: "Instagram",
@@ -20,19 +20,21 @@ const Socials = () => {
     }
   ]
 
-  return (
-    <div className="social">
-      <div className="social__inner">
-        <ul>
-          { socials.map((social, index) => (
-            <li key={index}>
-              <a rel="noreferrer" target="_blank" href={social.url}>{social.type}</a>
-            </li>
-          )) }
-        </ul>
+  if(showSocial) {
+    return (
+      <div className="social">
+        <div className="social__inner">
+          <ul>
+            { socials.map((social, index) => (
+              <li key={index}>
+                <a rel="noreferrer" target="_blank" href={social.url}>{social.type}</a>
+              </li>
+            )) }
+          </ul>
+        </div>
       </div>
-    </div>
-  )
+    )
+  } else return null;
 }
 
 export default Socials;

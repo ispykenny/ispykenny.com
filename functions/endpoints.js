@@ -1,9 +1,7 @@
 require('dotenv').config();
 const fs = require('fs')
-
 const contentful = require("contentful");
-const axios = require('axios');
-console.log(process.env.WAP)
+
 const client = contentful.createClient({
   space: "t1u1jb3v81x6",
   accessToken: process.env.WAP
@@ -31,9 +29,6 @@ const handler = async (event) => {
     fs.writeFile('/localendpoint.js', JSON.stringify(data), function (err) {
       if (err) throw err;
     });
-    axios.post(`https://api.netlify.com/build_hooks/${process.env.DEPLOY}`, {}, null)
-    .then((res) => console.log(res))
-    .catch((err) => console.log(err))
   }
   return {
     statusCode: 200,

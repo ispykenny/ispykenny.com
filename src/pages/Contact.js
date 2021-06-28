@@ -10,7 +10,7 @@ const Contact = () => {
       <Hero
         title="Let's Connect 🤙"
         copy="<p>Feel free to reach out on social or fill out the form below.</p>"
-        showSocial={true}
+        showSocial={false}
         cta={false}
         />
       <Inner class="inner inner-narrow">

@@ -1,28 +1,36 @@
-import React, {useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Cta from '../elements/Cta';
 import Inner from './Grid';
+import Richtext from './Richtext';
 import Socials from './Social';
 
-function Hero({ title, copy, showSocial , cta }) {
-  const [mounted, setMounted] = useState(false);
+function Hero({ content, showSocial , cta, src, cta_link, cta_text }) {
 
-  useEffect(() => {
-    setTimeout(() => setMounted(true), 100)
-  }, [])
-
-
+  const Avatar = () => {
+    if(src) {
+      return <div className="avatar" style={{backgroundImage: `url(${src})`}}></div>
+    } else return null
+  }
 
   return (
-    <Inner class="inner">
-      <div className="content-area">
-        <h1 className={`page-title ${mounted? 'loaded': ''}`} dangerouslySetInnerHTML={{__html: title}}></h1>
-        <div dangerouslySetInnerHTML={{__html: copy}}></div>
-        { showSocial === true ?  <Socials/>  : '' }
-        {cta ? <Link to="/letstalk" className="cta">
-          🤙 Let's Talk
-        </Link> : ''}
-      </div>
-    </Inner>
+    <div className="hero">
+      <Inner class="inner">
+        <div className="hero-area">
+          <div className="hero_flex">
+            <Avatar/>
+            <div>
+              <Richtext content={content}/>
+              <Cta 
+                cta={cta}
+                path_name={cta_link}
+                text={cta_text}
+              />
+              <Socials showSocial={showSocial}/>
+            </div>
+          </div>
+        </div>
+      </Inner>
+    </div>
   )
 }
 

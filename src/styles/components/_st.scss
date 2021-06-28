@@ -2,18 +2,19 @@
   position: relative;
   display: inline-block;
   overflow: hidden;
+  line-height: 1.2;
 
   span {
     position: relative;
     display: inline-block;
     transform: translateY(100%);
-    transition: transform 500ms ease;
   }
 }
 
 .loaded {
   .st span {
     transform: translateY(0);
+    transition: transform 500ms ease;
   }
 }
 
