@@ -1,10 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Inner from './Grid';
+import Socials from './Social';
 
 function Nav() {
 
   return (
     <div>
+      
+      <div class="inner">
+        <Socials showSocial={true}/>
+      </div>
+      
       <header>
         <div className="inner nav-parent">
           <div className="nav">
