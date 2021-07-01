@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Inner from './Grid';
 import Socials from './Social';
 
 function Nav() {
