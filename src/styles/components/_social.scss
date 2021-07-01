@@ -4,7 +4,7 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
 
@@ -15,6 +15,7 @@
 
   ul {
     display: flex;
+    justify-content: flex-end;
     margin: 0; padding: 0;
     list-style-type: none;
     padding-top: 1em;
@@ -29,14 +30,18 @@
   }
 
   a {
-    color: #222;
+    color: #444;
     font-weight: 700;
-
+    font-size: 12px;
   }
 }
 
 .dark .social a {
   color: white;
+}
+
+.social__link {
+  @include sr-only();
 }
 
 @media(min-width: $bp-md) {
