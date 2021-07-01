@@ -1,29 +1,27 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import Inner from './Grid';
+import React, {useEffect, useState} from 'react';
+
+const fetch_ig_posts = () => {
+  return fetch('https://www.instagram.com/ispykenny/?__a=1')
+  .then((res) => res.json())
+  .then((res) => res.data)
+  .catch((err) => console.log(err));
+}
 
 const Instagram = () => {
-  const [instafeed, setInstaFeed] = useState([]);
+  const [ig_posts, set_ig_posts] = useState();
 
   useEffect(() => {
-    const fetchFeed = async () => {
-      let feed = await fetchFeeder('https://www.instagram.com/ispykenny/?__a=1')
-      // setInstaFeed(feed)
-      console.log(feed)
-    }
+    fetch_ig_posts()
+    .then((res) => {
+      set_ig_posts(res)
+    })
+  }, [set_ig_posts])
 
-    fetchFeed();
-  }, [])
-
-  const fetchFeeder = (url) =>  axios(url)
-    .then(result => result)
-    .catch((erro) => console.log(erro))
 
   return (
     <div>
-      <Inner>
-        instagram
-      </Inner>
+      {console.log(ig_posts)}
+      Instagram
     </div>
   )
 }
