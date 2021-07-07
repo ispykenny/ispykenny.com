@@ -9,8 +9,12 @@
   &__card {
     display: flex;
     flex-direction: column-reverse;
+    margin-bottom: 3em;
     justify-content: space-between;
-    padding: 3em 0em;
+
+    &:first-of-type {
+      padding-top: 0em;
+    }
   }
 
   img {
@@ -22,6 +26,7 @@
 
   a {
     margin-top: 2em;
+    font-size: 14px;
   }
 }
 
@@ -33,6 +38,7 @@
 
       &__card {
         width: 90%;
+        margin-bottom: 4em;
       }
     }
   }
@@ -46,6 +52,8 @@
       &__card {
         width: 100%;
         flex-direction: row;
+        padding: 3em 0em;
+        margin-bottom: 0em;
         justify-content: space-between;
         border-bottom: 1px solid #ddd;
 

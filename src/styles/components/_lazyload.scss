@@ -1,12 +1,19 @@
 .lazy {
   position: relative;
   width: auto;
-  background: red;
-  
+  background: #eee;
+  border-radius: 15px;
+
   img {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0; left: 0;
   }
+}
+
+.lazyload-wrapper  {
+  position: absolute;
+  height: 100%; width: 100%;
+  top: 0; left: 0;
 }

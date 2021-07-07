@@ -1,10 +1,9 @@
-import React from 'react';
-import Lazyload from '../components/LazyLoad';
+import React  from 'react';
+import LazyLoad from 'react-lazyload';
 import Cta from './Cta';
-
-const Product = ({product}) => {
+const Product = ({product, index}) => {
   return (
-    <div className="product__card">
+    <div className="product__card" key={index}>
       <div className="product__content">
         <div className="product__content__inner">
           <h4>{product.name}</h4>
@@ -14,12 +13,15 @@ const Product = ({product}) => {
       </div> 
 
       <div className="product__image">
-        <Lazyload aspect_ratio={259 / 647  * 100 + '%'}>
-          <img 
-            data_src={product.image} 
-            alt={`A preview of ${product.name}`}
-          />
-        </Lazyload>
+        <div className="lazy" style={{paddingBottom: 259 / 647  * 100 + '%'}}>
+          <LazyLoad height={0} firstTimeVisible>
+          
+            <img 
+              src={product.image} 
+              alt={`A preview of ${product.name}`}
+            />
+          </LazyLoad>
+        </div>
       </div>
     </div>
   )
