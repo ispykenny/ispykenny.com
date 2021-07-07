@@ -7,7 +7,7 @@ function Nav() {
   return (
     <div>
       
-      <div class="inner">
+      <div className="inner">
         <Socials showSocial={true}/>
       </div>
       

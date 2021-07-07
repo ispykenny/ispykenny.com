@@ -15,6 +15,8 @@
 @import './styles/components/st';
 @import './styles/components/cards';
 @import './styles/components/form';
+@import './styles/components/products';
+@import './styles/components/lazyload';
 body {
   transition: $themeTransition;
   background-color: #F8F6FE;

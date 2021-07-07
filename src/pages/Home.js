@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import Me from '../assets/me.jpg';
+import Products from '../components/Products';
 const Home = () => {
   return (
     <div className="home">
@@ -12,6 +13,7 @@ const Home = () => {
         cta_link="/letstalk"
         cta_text="👋&nbsp;&nbsp;Let's connect"
         showSocial={false}/>
+        <Products/>
         <Projects/>
     </div>
   )

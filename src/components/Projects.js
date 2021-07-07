@@ -9,11 +9,6 @@ const Projects = () => {
 
   let project = [
     {
-      name: 'Dribbbler Players Card',
-      url: 'https://dribbbler-players-card.netlify.app/',
-      description: '<p>A web application that generates a sports-card-like card with user stats and generates a .jpg image of your card.</p><p>Tools used: <strong>React</strong>, <strong>Node.js</strong>, <strong>SCSS</strong>, <strong>Dribbble API</strong></p>'
-    },
-    {
       name: 'Shredlights',
       url: 'http://kennykrosky.com/shredlights/',
       description: '<p>Static site for a marketing page.</p><p>Tools used: <strong>JavaScript</strong>, <strong>SCSS</strong></p>'
@@ -34,19 +29,9 @@ const Projects = () => {
       description: '<p>Affliate Marketing Landing Page</p> <p>Tools used: <strong>React</strong>, <strong>Contentful CMS</strong>, <strong>Netlify Serverless Functions</strong></p>'
     },
     {
-      name: 'Digital Me',
-      url: 'https://digitalme.space/u/ispykenny',
-      description: '<p>Web application to allow users to sign up and store important links.</p><p>Tools used:</p><strong>PHP</strong>, <strong>MySql</strong>, <strong>JavaScript</strong>'
-    },
-    {
       name: 'Kannaco (wholesale)',
       url: 'https://wholesale.kannacocbd.com/',
       description: '<p>Custom <strong>Shopify</strong> theme with a custom Side-Cart Ajax feature.</p><p>Tools used:</p><strong>Liquid</strong>, <strong>Vanilla JS</strong>, <strong>SCSS</strong>'
-    },
-    {
-      name: 'Pixels',
-      url: 'https://adobe.com/go/cc_plugins_discover_plugin?pluginId=de6be381&workflow=share',
-      description: '<p>Adobe XD JavaScript plugin with over 70k monthly image downloads.</p><p>Tools Used: <strong>Node Js</strong>, <strong>Unsplash API</strong></p>'
     },
     {
       name: 'DexHub',
@@ -62,7 +47,7 @@ const Projects = () => {
 
   return (
     <Inner class="inner">
-      <h2 className="animate">Projects</h2>
+      <h2 className="animate">Websites I've Built</h2>
       <div className="cards">
         { project.map((pro, index) => (
           <a className="cards__item animate" href={pro.url} target="_blank" rel="noreferrer" key={index}>
