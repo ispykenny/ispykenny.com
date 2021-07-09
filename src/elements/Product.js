@@ -5,7 +5,6 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 const Product = ({product, index}) => {
   const {fields} = product
   const {title, description, hasLink, link, thumbnail } = fields;
-  console.log(description)
   return (
     <div className="product__card" key={index}>
       <div className="product__content">

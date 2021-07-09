@@ -1,8 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import DigitalMe from '../assets/Digitalme@2x.png';
-import Pixels from '../assets/Pixels@2x.png';
-import Minimal from '../assets/Minimal-To-Do-List@2x.png';
-import Dribbbler from '../assets/Dribbbler-Player-cards@2x.png';
 import Product from '../elements/Product';
 
 const fetch_products = () => {
@@ -12,10 +8,8 @@ const fetch_products = () => {
   .catch((err) => console.log(err))
 }
 
-
 const Products = () => {
   const [products_array, set_products] = useState([]);
-
   useEffect(() => {
     fetch_products().then((res) => {
       set_products(res.items)
