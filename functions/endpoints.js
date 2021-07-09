@@ -1,35 +1,26 @@
-require('dotenv').config();
-const fs = require('fs')
+require('dotenv/config')
 const contentful = require("contentful");
 
 const client = contentful.createClient({
-  space: "t1u1jb3v81x6",
-  accessToken: process.env.WAP
+  space: "04iiozfw14yr",
+  accessToken: process.env.APIKEY
 });
 
 
 const fetchData = async (type) => {
-  if(type === "rebuild") {
     return client
-    .getEntries({
-        'content_type': 'title'
-      })
-      .then(entry => {
-        return entry
-      })
-      .catch(err => console.log(err))  
-  }
+    .getEntries('ehF3OKHwDp170yvY')
+    .then(entry => {
+      console.log(entry)
+      return entry
+    })
+  .catch(err => console.log(err))  
 }
 
 const handler = async (event) => {
   const query = event.queryStringParameters.type; 
-  const data = await fetchData(query);
+  const data = await fetchData();
   
-  if(query === "rebuild") {
-    fs.writeFile('/localendpoint.js', JSON.stringify(data), function (err) {
-      if (err) throw err;
-    });
-  }
   return {
     statusCode: 200,
     body: JSON.stringify(data)

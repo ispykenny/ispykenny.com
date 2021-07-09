@@ -1,14 +1,18 @@
 import React  from 'react';
 import LazyLoad from 'react-lazyload';
 import Cta from './Cta';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 const Product = ({product, index}) => {
+  const {fields} = product
+  const {title, description, hasLink, link, thumbnail } = fields;
+  console.log(description)
   return (
     <div className="product__card" key={index}>
       <div className="product__content">
         <div className="product__content__inner">
-          <h4>{product.name}</h4>
-          <div dangerouslySetInnerHTML={{__html: product.description}}></div>
-          <Cta cta={product.has_link} url={product.url} text={'Visit Page'}/>
+          <h4>{title}</h4>
+          {documentToReactComponents(description)}
+          <Cta cta={hasLink} url={link} text={'Visit Page'}/>
         </div>  
       </div> 
 
@@ -17,7 +21,7 @@ const Product = ({product, index}) => {
           <LazyLoad height={0} firstTimeVisible>
           
             <img 
-              src={product.image} 
+              src={thumbnail.fields.file.url} 
               alt={`A preview of ${product.name}`}
             />
           </LazyLoad>
