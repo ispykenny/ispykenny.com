@@ -19,14 +19,18 @@ const Products = () => {
   return (
     <section>
       <div className="inner">
-        <div className="section-intro">
-          <h2>My Current Projects</h2>
-          <p>Here are some of the products I currently built, own, and run:</p>
-          <hr/>
-        </div>
-        <div className="product">
-          {products_array && products_array.map((item, index) => <Product product={item} key={index}/>)}
-        </div>
+        {products_array.length > 1 ? (
+        <>
+          <div className="section-intro">
+            <h2>My Current Projects</h2>
+            <p>Here are some of the products I currently built, own, and run:</p>
+            <hr/>
+          </div>
+          <div className="product">
+            {products_array.map((item, index) => <Product product={item} key={index}/>)}
+          </div>
+        </>
+        ) : <div style={{minHeight: 900}}><h1>Loading My Products...</h1></div> }
       </div>
     </section>
   )
