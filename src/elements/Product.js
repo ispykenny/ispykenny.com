@@ -11,7 +11,12 @@ const Product = ({product, index}) => {
         <div className="product__content__inner">
           <h3>{title}</h3>
           {documentToReactComponents(description)}
-          <Cta cta={hasLink} url={link} text={`Visit Project`}/>
+          <Cta 
+            cta={hasLink} 
+            url={link} 
+            screen_reader={`View ${title} website page`}
+            text='Visit Project'
+          />
         </div>  
       </div> 
 
@@ -20,7 +25,7 @@ const Product = ({product, index}) => {
           <LazyLoad height={0} firstTimeVisible>
             <img 
               src={thumbnail.fields.file.url} 
-              alt={`A preview of ${product.name}`}
+              alt={`A preview of ${product.title}`}
             />
           </LazyLoad>
         </div>
