@@ -1,5 +1,5 @@
-import { cn } from "@/utils";
-import { ReactNode } from "react";
+import { cn } from '@/utils';
+import { ReactNode } from 'react';
 
 type Props = {
   children?: ReactNode;

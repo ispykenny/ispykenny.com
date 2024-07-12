@@ -1,4 +1,4 @@
-import { Image, PostNode } from "./global.types";
+import { Image, PostNode } from './global.types';
 
 export type HeaderProps = {
   heroTitle: string;

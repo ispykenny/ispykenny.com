@@ -1,6 +1,6 @@
-import { ActionLink, Container, Heading } from "@/components";
-import { Arrow } from "@/icons";
-import { HeaderProps } from "@/types";
+import { ActionLink, Container, Heading } from '@/components';
+import { Arrow } from '@/icons';
+import { HeaderProps } from '@/types';
 
 export const Header = ({ heroTitle, heroCopy }: HeaderProps) => {
   if (!heroTitle || !heroCopy) return null;
@@ -8,7 +8,7 @@ export const Header = ({ heroTitle, heroCopy }: HeaderProps) => {
     <section className="min-h-[calc(10vh)] w-full items-center justify-between flex mb-10 pb-20">
       <Container>
         <div className="sm:max-w-lg md:max-w-screen-sm lg:max-w-screen-md">
-          <Heading sizeVariant="lg" tag={"h1"}>
+          <Heading sizeVariant="lg" tag={'h1'}>
             {heroTitle}
           </Heading>
         </div>

@@ -1,4 +1,4 @@
-import { Image } from "./global.types";
+import { Image } from './global.types';
 
 export type AboutPageProps = {
   pageBy: {

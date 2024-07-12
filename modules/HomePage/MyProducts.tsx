@@ -1,7 +1,7 @@
-import { ActionLink, Container, DefaultContent, Heading } from "@/components";
-import { Arrow } from "@/icons";
-import { Project } from "@/types";
-import Image from "next/image";
+import { ActionLink, Container, DefaultContent, Heading } from '@/components';
+import { Arrow } from '@/icons';
+import { Project } from '@/types';
+import Image from 'next/image';
 
 export const MyProducts = ({
   className,
@@ -23,7 +23,7 @@ export const MyProducts = ({
           >
             <div className="md:w-1/2">
               <p className="text-2xl font-bold">{project.title}</p>
-              <DefaultContent className={""} content={project.content} />
+              <DefaultContent className={''} content={project.content} />
               <div className="block md:inline-block mt-10">
                 <ActionLink
                   href={project.link}

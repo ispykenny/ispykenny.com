@@ -1,6 +1,6 @@
-import { Container, DefaultContent, Heading } from "@/components";
-import { AboutPageProps } from "@/types";
-import Image from "next/image";
+import { Container, DefaultContent, Heading } from '@/components';
+import { AboutPageProps } from '@/types';
+import Image from 'next/image';
 
 export const AboutTemplate = ({ data }: { data: AboutPageProps }) => {
   const { pageBy: pageData } = data;
@@ -22,7 +22,7 @@ export const AboutTemplate = ({ data }: { data: AboutPageProps }) => {
                 src={pageData.aboutPage.mainImage.node.sourceUrl}
                 height={pageData.aboutPage.mainImage.node.mediaDetails.height}
                 width={pageData.aboutPage.mainImage.node.mediaDetails.width}
-                alt={pageData.aboutPage.mainImage.node.altText || ""}
+                alt={pageData.aboutPage.mainImage.node.altText || ''}
               />
             </div>
           </div>

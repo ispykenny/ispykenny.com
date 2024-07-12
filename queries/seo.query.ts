@@ -1,4 +1,4 @@
-import { gql } from "graphql-request";
+import { gql } from 'graphql-request';
 
 export const GetSeoQuery = gql`
   query GetSeoQuery($slug: String!) {

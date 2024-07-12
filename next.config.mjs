@@ -8,7 +8,7 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: "api.ispykenny.com",
+        hostname: 'api.ispykenny.com',
       },
     ],
   },

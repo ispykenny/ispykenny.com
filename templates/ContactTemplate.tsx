@@ -1,6 +1,6 @@
-import { Container, Heading } from "@/components";
-import { ContactForm } from "@/modules";
-import { BasicPageProps } from "@/types";
+import { Container, Heading } from '@/components';
+import { ContactForm } from '@/modules';
+import { BasicPageProps } from '@/types';
 
 export const ContactTemplate = ({ data }: { data: BasicPageProps }) => {
   return (

@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useRouter } from "next/navigation";
+import { useRouter } from 'next/navigation';
 /* eslint-disable react-hooks/exhaustive-deps */
 
 import {
@@ -9,10 +9,10 @@ import {
   useContext,
   useEffect,
   useState,
-} from "react";
+} from 'react';
 
-type KeyTypes = "theme" | "isMenuOpen";
-type ValueTypes = "light" | "dark" | boolean;
+type KeyTypes = 'theme' | 'isMenuOpen';
+type ValueTypes = 'light' | 'dark' | boolean;
 
 const GetThemeSettings = createContext<any>(null);
 const SetThemeSettings = createContext<any>(null);
@@ -30,11 +30,11 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     if (window) {
-      const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
+      const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
       if (prefersDarkMode.matches) {
-        setSettings({ theme: "dark", isMenuOpen: false });
+        setSettings({ theme: 'dark', isMenuOpen: false });
       } else {
-        setSettings({ theme: "light", isMenuOpen: false });
+        setSettings({ theme: 'light', isMenuOpen: false });
       }
     }
   }, []);

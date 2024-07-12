@@ -1,4 +1,4 @@
-"use server";
+'use server';
 import {
   AboutTemplateQuery,
   BlogTemplateQuery,
@@ -6,14 +6,14 @@ import {
   ContactTemplateQuery,
   DefaultTemplateQuery,
   HomeTemplateQuery,
-} from "@/queries";
+} from '@/queries';
 import {
   getPageTemplate,
   gqlClient,
   Template,
   TemplateQueryMap,
-} from "@/utils";
-import { NextResponse } from "next/server";
+} from '@/utils';
+import { NextResponse } from 'next/server';
 
 type ContextTypes = {
   params: {

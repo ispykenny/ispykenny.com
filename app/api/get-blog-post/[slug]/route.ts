@@ -1,7 +1,7 @@
-import { PostNode } from "@/types";
-import { gqlClient } from "@/utils";
-import { gql } from "graphql-request";
-import { NextResponse } from "next/server";
+import { PostNode } from '@/types';
+import { gqlClient } from '@/utils';
+import { gql } from 'graphql-request';
+import { NextResponse } from 'next/server';
 
 type ContextTypes = {
   params: {

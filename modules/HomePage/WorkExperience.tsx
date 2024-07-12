@@ -1,7 +1,7 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-import { Container, Heading, Hr, Tag } from "@/components";
-import { WorkExperience as WorkExperienceTypes } from "@/types";
+import { Container, Heading, Hr, Tag } from '@/components';
+import { WorkExperience as WorkExperienceTypes } from '@/types';
 
 export const WorkExperience = ({
   workExperience,
@@ -16,7 +16,7 @@ export const WorkExperience = ({
         {workExperience.map((experience, index: number) => (
           <div key={index}>
             <Hr />
-            <Heading sizeVariant="sm" tag={"p"}>
+            <Heading sizeVariant="sm" tag={'p'}>
               {experience.company}
             </Heading>
             <div className="mt-4 inline-flex flex-col gap-4 md:flex md:flex-row">

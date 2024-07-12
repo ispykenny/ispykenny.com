@@ -1,7 +1,7 @@
-"use server";
+'use server';
 
-import { gql } from "graphql-request";
-import { gqlClient } from "./gqlClient";
+import { gql } from 'graphql-request';
+import { gqlClient } from './gqlClient';
 
 type pageTemplateProps = {
   pageBy: {

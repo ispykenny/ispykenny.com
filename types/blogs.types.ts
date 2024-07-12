@@ -1,4 +1,4 @@
-import { Posts } from "./home.types";
+import { Posts } from './home.types';
 
 export type BlogPageProps = {
   posts: Posts;

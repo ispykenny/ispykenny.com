@@ -1,13 +1,13 @@
-import { GetSeoQuery } from "@/queries";
+import { GetSeoQuery } from '@/queries';
 import {
   AboutTemplate,
   BlogTemplate,
   ConnectTemplate,
   ContactTemplate,
   HomeTemplate,
-} from "@/templates";
-import { fetchPageData, gqlClient, Template } from "@/utils";
-import { Metadata, ResolvingMetadata } from "next";
+} from '@/templates';
+import { fetchPageData, gqlClient, Template } from '@/utils';
+import { Metadata, ResolvingMetadata } from 'next';
 
 export async function generateMetadata(
   {

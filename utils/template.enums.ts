@@ -1,11 +1,11 @@
 export enum Template {
-  Home = "Home",
-  About = "About",
-  Blog = "Blog",
-  Contact = "Contact",
-  Connect = "Connect",
-  Default = "Default",
-  undefined = "undefined",
+  Home = 'Home',
+  About = 'About',
+  Blog = 'Blog',
+  Contact = 'Contact',
+  Connect = 'Connect',
+  Default = 'Default',
+  undefined = 'undefined',
 }
 
 export type TemplateQueryMap = {

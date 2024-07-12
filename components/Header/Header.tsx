@@ -1,8 +1,8 @@
 // import { Arrow } from "../icons/Arrow";
 
-import { ActionLink } from "../Action";
-import { Container } from "../Container";
-import { Heading } from "../Heading";
+import { ActionLink } from '../Action';
+import { Container } from '../Container';
+import { Heading } from '../Heading';
 
 export const Header = ({
   heroTitle,
@@ -15,7 +15,7 @@ export const Header = ({
     <section className="min-h-[calc(10vh)] w-full items-center justify-between flex mb-10 pb-20">
       <Container>
         <div className="sm:max-w-lg md:max-w-screen-sm lg:max-w-screen-md">
-          <Heading sizeVariant="lg" tag={"h1"}>
+          <Heading sizeVariant="lg" tag={'h1'}>
             {heroTitle}
           </Heading>
         </div>

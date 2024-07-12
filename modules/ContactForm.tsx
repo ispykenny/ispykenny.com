@@ -1,15 +1,15 @@
-"use client";
-import { ActionButton } from "@/components";
-import FormElements from "@/components/Elements/FormElements";
-import { useState } from "react";
+'use client';
+import { ActionButton } from '@/components';
+import FormElements from '@/components/Elements/FormElements';
+import { useState } from 'react';
 
 export const ContactForm = () => {
   const [formSubmitting, setFormSubmitting] = useState(false);
   const [hasSent, setHasSent] = useState(false);
   const [hasErrors, setHasErrors] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   });
 
   const handleFormSubmission = async (event: React.SyntheticEvent) => {
@@ -18,10 +18,10 @@ export const ContactForm = () => {
     const formData = new FormData(event.target as HTMLFormElement);
     const { ...values } = Object.fromEntries(formData.entries());
     try {
-      const doSubmission = await fetch("/api/send-email", {
-        method: "POST",
+      const doSubmission = await fetch('/api/send-email', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(values),
       });
@@ -65,7 +65,7 @@ export const ContactForm = () => {
 
           <div>
             <ActionButton
-              text={formSubmitting ? "Submitting..." : "Submit"}
+              text={formSubmitting ? 'Submitting...' : 'Submit'}
               theme="primary"
               type="submit"
               disabled={formSubmitting}
