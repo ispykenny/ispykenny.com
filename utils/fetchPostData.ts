@@ -1,13 +1,13 @@
-'use server';
+"use server";
 
-import { ROUTES } from './routes';
+import { ROUTES } from "./routes";
 
 export const fetchPostData = async (slug: string) => {
-	const data = await fetch(`${ROUTES.GET_POST}/${slug}`, {
-		next: {
-			tags: ['cache'],
-		},
-	});
+  const data = await fetch(`${ROUTES.GET_POST}/${slug}`, {
+    next: {
+      tags: ["cache"],
+    },
+  });
 
-	return data;
+  return data;
 };
