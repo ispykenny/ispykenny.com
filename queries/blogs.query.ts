@@ -1,19 +1,19 @@
-import { gql } from 'graphql-request';
+import { gql } from "graphql-request";
 
 export const BlogTemplateQuery = gql`
-	query {
-		posts {
-			nodes {
-				excerpt
-				slug
-				title
-				date
-				featuredImage {
-					node {
-						sourceUrl
-					}
-				}
-			}
-		}
-	}
+  query {
+    posts {
+      nodes {
+        excerpt
+        slug
+        title
+        date
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
 `;

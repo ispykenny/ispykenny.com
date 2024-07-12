@@ -22,6 +22,6 @@ export const Heading = ({ sizeVariant, tag, children }: PropTypes) => {
   return createElement(
     tag,
     { className: "font-bold  " + getClasses() },
-    children
+    children,
   );
 };
