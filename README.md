@@ -1,4 +1,4 @@
-# ispykenny.com
+# ✨ ispykenny.com
 
 [![ispykenny](https://api.ispykenny.com/wp-content/uploads/2024/07/Screenshot-2024-07-12-at-2.30.45 PM-e1720822021384.png "ispykenny")](http://ispykenny.com 'ispykenny')
 
@@ -13,7 +13,7 @@
 
 ---
 
-####Child Routes
+#### Child Routes
 
 Child routes make the `fetchPageData($slug) (path: api/get-page-data/$slug)` request. This request does the following:
 
