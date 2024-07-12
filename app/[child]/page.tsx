@@ -52,16 +52,13 @@ export default async function ChildPage({
   const fetchData = await fetchPageData(childSlug);
   const { data, template } = await fetchData.json();
 
-  switch (template) {
-    case Template.About:
-      return <AboutTemplate data={data} />;
-    case Template.Connect:
-      return <ConnectTemplate />;
-    case Template.Contact:
-      return <ContactTemplate data={data} />;
-    case Template.Blog:
-      return <BlogTemplate data={data} />;
-    default:
-      <>Page not found</>;
-  }
+  const templates: { [key: string]: JSX.Element } = {
+    [Template.About]: <AboutTemplate data={data} />,
+    [Template.Connect]: <ConnectTemplate />,
+    [Template.Contact]: <ContactTemplate data={data} />,
+    [Template.Blog]: <BlogTemplate data={data} />,
+  };
+
+  const TemplateComponent = templates[template] || <>Page not found</>;
+  return TemplateComponent;
 }
