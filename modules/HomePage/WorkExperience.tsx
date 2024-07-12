@@ -13,7 +13,7 @@ export const WorkExperience = ({
   return (
     <section className={className}>
       <Container classes="flex flex-col gap-20 xl:justify-between">
-        {workExperience?.map((experience, index: number) => (
+        {workExperience.map((experience, index: number) => (
           <div key={index}>
             <Hr />
             <Heading sizeVariant="sm" tag={"p"}>

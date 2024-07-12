@@ -13,12 +13,12 @@ export const ConnectTemplate = () => {
     };
   }, []);
   return (
-    <>
+    <section>
       <div
         className="calendly-inline-widget"
         data-url="https://calendly.com/kenny-krosky/quick-sync?hide_gdpr_banner=1"
         style={{ minWidth: "320px", height: "700px" }}
       ></div>
-    </>
+    </section>
   );
 };
