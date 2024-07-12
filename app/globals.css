@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--primary-color: #fff;
+	--secondary-color: #3f3f44;
+	--brand-color: #2563eb;
+	--offset-color: #e4e7eb;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	min-width: 0px;
+}
+
+.hasShadow {
+	@apply shadow-2xl shadow-blue-600/40;
+}
+
+.input,
+textarea {
+	@apply h-14 border rounded-md px-2 py-2 outline-brand-color focus:outline-offset-[4px] w-full;
+}
+
+textarea {
+	@apply h-28 pt-4 resize-none;
+}
+
+.label {
+	@apply text-sm font-medium font-semibold mb-2 inline-block;
+}
+
+.label {
+	margin-bottom: 0.5rem;
+	display: inline-block;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	font-weight: 600;
+}
