@@ -4,6 +4,7 @@
 
 ### Stack
 
+- CMS WordPress
 - Next.js (App Dir): Learn more [Next.js](https://next.js)
 - GraphQL for data fetching [WPGraphQL](https://www.wpgraphql.com)
 - Tailwind for styling [Tailwind](https://tailwindcss.com/)
@@ -18,6 +19,15 @@
 Child routes make the `fetchPageData($slug) (path: api/get-page-data/$slug)` request. This request does the following:
 
 It gets the slug template so it can use the associated graphql query
+
+##### Templates that are supported
+
+- About
+- Blog
+- Contact
+- Connect
+- Default
+- Home
 
 ```
 const pageTemplate = await getPageTemplate(slug);
